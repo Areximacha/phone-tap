@@ -2,6 +2,7 @@ import Person from '../models/Person'
 import Mi5 from '../models/Mi5'
 
 import profile from '../templates/profile'
+import profileModal from '../templates/profileModal'
 
 const mi5 = new Mi5()
 
@@ -30,13 +31,36 @@ export default {
     }
   },
 
-  renderCompnents () {
-    for (let i = 0; people.length > i; i++) {
-      console.log(mi5.log(people[i]))
+  profileClickEvent () {
+    const profileLinks = document.querySelectorAll('a.profile-link')
+    for (let i = 0; profileLinks.length > i; i++) {
+      profileLinks[i].addEventListener('click', function (e) {
+        e.preventDefault()
+        const profile = new Person(this.getAttribute('data-profile'))
+
+        const profileData = mi5.mapProfile(profile)
+        const log = mi5.log(profile)
+        const modalTemplate = profileModal(profileData, log)
+
+        const modalContainer = document.getElementById('profile-modal')
+        modalContainer.innerHTML = modalTemplate
+        document.getElementById('profile-modal-wrapper').classList.add('active')
+      })
     }
+  },
+
+  modalCloseEvent () {
+    const modalClose = document.getElementById('modal-close')
+
+    modalClose.addEventListener('click', function (e) {
+      e.preventDefault()
+      document.getElementById('profile-modal-wrapper').classList.remove('active')
+    })
   },
 
   init () {
     this.renderProfiles()
+    this.profileClickEvent()
+    this.modalCloseEvent()
   }
 }

@@ -1,0 +1,75 @@
+/*********************
+
+Authors:
+	Jay Tang
+
+Stylesheet:
+	Profile modal module stylesheet
+
+*********************/
+
+.profile-modal-wrapper {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+
+	.overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $colour-background-negative;
+		opacity: 0.7;
+	}
+
+	.close {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+
+		i {
+			width: 40px;
+			height: 40px;
+			background-image: url("../img/icons/close_icon.svg");
+			background-repeat: no-repeat;
+		}
+	}
+
+	&.active {
+		display: block;
+	}
+}
+
+.profile-modal {
+	position: absolute;
+	padding: 40px;
+	width: 800px;
+	top: 100px;
+	left: 50%;
+	margin-left: -400px;
+	background-color: $colour-background-delta;
+	@include border-radius(10px);
+
+	h1 {
+		margin-bottom: 20px;
+	}
+
+	p {
+		font-size: 18px;
+		font-weight: 600;
+	}
+
+	@include breakpoint(false, desktop) {
+		width: 100%;
+		left: 0;
+		margin-left: 0;
+
+		.details {
+			padding-left: 10px;
+		}
+	}
+}

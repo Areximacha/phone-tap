@@ -21,6 +21,10 @@ body {
 	font-weight: 300;
 	background-image: url("../img/backgrounds/Background_pattern.png");
 	background-repeat: no-repeat;
+
+	@include breakpoint(false, desktop) {
+		background-image: none;
+	}
 }
 
 * {
@@ -72,7 +76,7 @@ h2 {
 	line-height: 0.9;
 
 	@include breakpoint(false, tablet) {
-		font-size: 35px;
+		font-size: 18px;
 		line-height: 1.1;
 	}
 }
@@ -86,7 +90,7 @@ h3 {
 	font-weight: 600;
 
 	@include breakpoint(false, tablet) {
-		font-size: 20px;
+		font-size: 18px;
 	}
 }
 

@@ -1,7 +1,7 @@
 const profile = (data) => {
   return (
     `<div class="grid-6">
-      <a href="#" class="profile-link">
+      <a href="#" class="profile-link" data-profile="${data.id}">
         <div class="profile-card">
           <div class="profile-pic" style="background-image: url(${require('../../img/profiles/' + data.img)})"></div>
           <div class="details">

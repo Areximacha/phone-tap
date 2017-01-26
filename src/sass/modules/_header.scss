@@ -19,4 +19,8 @@ header {
 		background-size: contain;
 		background-position: center;
 	}
+
+	@include breakpoint(false, desktop) {
+		padding-left: 0;
+	}
 }

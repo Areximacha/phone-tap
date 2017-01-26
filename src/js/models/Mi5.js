@@ -3,14 +3,19 @@ import logs from '../data/logs'
 const Mi5 = function () {
   const getProfiles = (people) => {
     return people.map(function (personRef, index) {
-      let person = logs[personRef.getName()]
-
-      return {
-        name: `${person.firstname} ${person.surname}`,
-        number: person.number,
-        img: person.img
-      }
+      return mapProfile(personRef)
     })
+  }
+
+  const mapProfile = (personRef) => {
+    let person = logs[personRef.getName()]
+
+    return {
+      id: person.firstname,
+      name: `${person.firstname} ${person.surname}`,
+      number: person.number,
+      img: person.img
+    }
   }
 
   const log = (data) => {
@@ -33,7 +38,8 @@ const Mi5 = function () {
 
   return {
     log,
-    getProfiles
+    getProfiles,
+    mapProfile
   }
 }
 
