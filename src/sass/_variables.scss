@@ -1,0 +1,48 @@
+/*********************
+
+Authors:
+	Jay Tang
+
+Stylesheet:
+	Variables stylesheet
+
+*********************/
+
+// colours
+
+$colour-primary: #FF1177;
+$colour-secondary: #333;
+
+$colour-background: #161616;
+$colour-background-beta: #fff;
+$colour-background-neg: #333;
+$colour-background-delta: #000;
+
+$colour-opacity-alpha: rgba(37, 37, 37, 0.77);
+
+$colour-header: #374049;
+$colour-header-beta: #fff;
+
+$colour-copy: #333;
+$colour-copy-neg: #fff;
+
+// fonts
+
+$font-press-start: "pressStart", "Arial", "Helvetica", sans-serif;
+$font-abuket: "abuket", "Arial", "Helvetica", sans-serif;
+
+// layout
+
+$grid-columns : 12;
+$grid-width : 960px;
+$grid-gutter : 10px;
+$grid-padding-outer : 20px;
+
+// breakpoints
+
+$breakpoints: (
+	(phone 		480px)
+	(tablet 	680px)
+	(desktop 	960px)
+	(extended 	1440px)
+);

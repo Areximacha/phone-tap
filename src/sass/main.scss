@@ -1,0 +1,58 @@
+/*********************
+
+Authors:
+	Jay Tang
+
+Stylesheet:
+	Main stylesheet
+
+*********************/
+
+/******************************************************************
+Utilities
+******************************************************************/
+
+// compass
+@import "compass";
+
+// variables
+@import "variables";
+
+// mixins
+//@import "utilities/mixins";
+
+// reset
+@import "utilities/reset";
+
+// breakpoints
+@import "utilities/breakpoints";
+
+// grid
+@import "utilities/grid";
+
+// fonts
+@import "utilities/fonts";
+
+// base style
+@import "base";
+
+// gui style
+//@import "gui";
+
+/******************************************************************
+Modules
+******************************************************************/
+
+// header
+// @import "modules/header";
+
+// // footer
+// @import "modules/footer";
+
+/******************************************************************
+Views
+******************************************************************/
+
+// home
+@import "views/home";
+
