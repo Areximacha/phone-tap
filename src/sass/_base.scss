@@ -14,11 +14,13 @@ html {
 
 body {
 	background-color: $colour-background;
-	color: $colour-copy;
+	color: $colour-secondary;
 	font-size: 100%;
 	line-height: 100%;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: $font-roboto;
 	font-weight: 300;
+	background-image: url("../img/backgrounds/Background_pattern.png");
+	background-repeat: no-repeat;
 }
 
 * {
@@ -50,35 +52,24 @@ div {
 }
 
 h1 {
-	font-size: 85px;
-	text-transform: uppercase;
-	line-height: 0.9em;
-	font-weight: bold;
-	color: $colour-header;
-
-	@include breakpoint(false, desktop) {
-		font-size: 75px;
-	}
+	font-size: 25px;
+	line-height: 1em;
+	font-weight: 600;
+	color: $colour-primary;
+	padding-bottom: 10px;
+	border-bottom: 1px solid $colour-primary;
 
 	@include breakpoint(false, tablet) {
-		font-size: 48px;
+		font-size: 18px;
 	}
 }
 
 h2 {
-	font-size: 48px;
+	font-size: 25px;
+	font-weight: 600;
 	margin: 10px 0;
-	color: $colour-header;
+	color: $colour-secondary;
 	line-height: 0.9;
-
-	&.h2-beta{
-		color: $colour-header-beta;
-	}
-
-
-	@include breakpoint(false, desktop) {
-		font-size: 40px;
-	}
 
 	@include breakpoint(false, tablet) {
 		font-size: 35px;
@@ -89,12 +80,10 @@ h2 {
 h3 {
 
 	font-size: 24px;
-	color: $colour-header;
+	color: $colour-primary;
 	line-height: 0.9;
-
-	@include breakpoint(false, desktop) {
-		font-size: 25px;
-	}
+	font-family: $font-roboto-black;
+	font-weight: 600;
 
 	@include breakpoint(false, tablet) {
 		font-size: 20px;

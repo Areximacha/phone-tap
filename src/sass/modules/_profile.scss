@@ -1,0 +1,32 @@
+/*********************
+
+Authors:
+	Jay Tang
+
+Stylesheet:
+	Profile module stylesheet
+
+*********************/
+
+.profile-card {
+	background-color: $colour-background-beta;
+	line-height: 0;
+	margin-bottom: 20px;
+
+	div {
+		display: inline-block;
+	}
+}
+
+.profile-pic {
+	width: 150px;
+	height: 166px;
+	background-image: url("../img/profiles/Alex_lambert.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.details {
+	vertical-align: top;
+	padding: 40px 0 0 40px;
+}

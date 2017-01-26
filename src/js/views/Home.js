@@ -24,7 +24,9 @@ export default {
     const profiles = mi5.getProfiles(people)
 
     for (let i = 0; profiles.length > i; i++) {
-      console.log(profile(profiles[i]))
+      const profileTemplate = profile(profiles[i])
+      const profileModule = document.getElementById('profile-wrapper')
+      profileModule.insertAdjacentHTML('beforeend', profileTemplate)
     }
   },
 

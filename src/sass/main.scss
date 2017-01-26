@@ -18,9 +18,6 @@ Utilities
 // variables
 @import "variables";
 
-// mixins
-//@import "utilities/mixins";
-
 // reset
 @import "utilities/reset";
 
@@ -36,18 +33,15 @@ Utilities
 // base style
 @import "base";
 
-// gui style
-//@import "gui";
-
 /******************************************************************
 Modules
 ******************************************************************/
 
 // header
-// @import "modules/header";
+@import "modules/header";
 
-// // footer
-// @import "modules/footer";
+// profile
+@import "modules/profile";
 
 /******************************************************************
 Views

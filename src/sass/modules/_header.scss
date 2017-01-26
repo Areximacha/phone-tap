@@ -1,0 +1,22 @@
+/*********************
+
+Authors:
+	Jay Tang
+
+Stylesheet:
+	Header module stylesheet
+
+*********************/
+
+header {
+	padding: 75px 0 100px 140px;
+
+	.logo {
+		width: 300px;
+		height: 80px;
+		background-image: url("../img/icons/logo.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+	}
+}
