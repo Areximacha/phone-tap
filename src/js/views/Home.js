@@ -1,11 +1,15 @@
+// Home view
 import Person from '../models/Person'
-import Mi5 from '../models/Mi5'
+import PhoneTap from '../models/PhoneTap'
 
+// Import partial templates
 import profile from '../templates/profile'
 import profileModal from '../templates/profileModal'
 
-const mi5 = new Mi5()
+// Instanciate PhoneTap
+const phoneTap = new PhoneTap()
 
+// For the purposes of this test, we're instanciating each of the people here and putting them in an array for ease of use
 const dan = new Person('Dan')
 const anthony = new Person('Anthony')
 const alex = new Person('Alex')
@@ -13,16 +17,10 @@ const erin = new Person('Erin')
 
 const people = [dan, anthony, alex, erin]
 
-// const phone = {owner: dan, number: '0776253227'}
-
-// dan.call(phone, alex)
-
-// const mark = new Person('Mark')
-// dan.text(phone, alex, mark)
-
 export default {
+  // Renders all the profile cards to the home view
   renderProfiles () {
-    const profiles = mi5.getProfiles(people)
+    const profiles = phoneTap.getProfiles(people)
 
     for (let i = 0; profiles.length > i; i++) {
       const profileTemplate = profile(profiles[i])
@@ -31,6 +29,7 @@ export default {
     }
   },
 
+  // Adds click event listeners to all the profile cards
   profileClickEvent () {
     const profileLinks = document.querySelectorAll('a.profile-link')
     for (let i = 0; profileLinks.length > i; i++) {
@@ -38,8 +37,8 @@ export default {
         e.preventDefault()
         const profile = new Person(this.getAttribute('data-profile'))
 
-        const profileData = mi5.mapProfile(profile)
-        const log = mi5.log(profile)
+        const profileData = phoneTap.mapProfile(profile)
+        const log = phoneTap.log(profile)
         const modalTemplate = profileModal(profileData, log)
 
         const modalContainer = document.getElementById('profile-modal')
@@ -49,6 +48,7 @@ export default {
     }
   },
 
+  // Adds click event listener to the modal close button
   modalCloseEvent () {
     const modalClose = document.getElementById('modal-close')
 
@@ -58,6 +58,7 @@ export default {
     })
   },
 
+  // Initiates the home view
   init () {
     this.renderProfiles()
     this.profileClickEvent()

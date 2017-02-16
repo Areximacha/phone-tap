@@ -1,3 +1,4 @@
+// Profile card partial template.
 const profile = (data) => {
   return (
     `<div class="grid-6">

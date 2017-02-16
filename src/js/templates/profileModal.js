@@ -1,3 +1,4 @@
+// Profile modal card partial template
 const profileModal = (profile, logs) => {
   let logList = ''
 

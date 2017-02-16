@@ -1,12 +1,14 @@
 import logs from '../data/logs'
 
-const Mi5 = function () {
+const PhoneTap = function () {
+  // Method that takes and array of person and returns an array of their profile information
   const getProfiles = (people) => {
     return people.map(function (personRef, index) {
       return mapProfile(personRef)
     })
   }
 
+  // Method that returns profile information from the log data from a name
   const mapProfile = (personRef) => {
     let person = logs[personRef.getName()]
 
@@ -18,6 +20,7 @@ const Mi5 = function () {
     }
   }
 
+  // Method that takes a person and returns their logs from the log data
   const log = (data) => {
     const person = logs[data.getName()]
 
@@ -36,6 +39,7 @@ const Mi5 = function () {
     return personLog
   }
 
+  // Exposes the methods
   return {
     log,
     getProfiles,
@@ -43,4 +47,4 @@ const Mi5 = function () {
   }
 }
 
-export default Mi5
+export default PhoneTap
